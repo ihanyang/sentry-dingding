@@ -49,7 +49,7 @@ class DingDingPlugin(NotificationPlugin):
         data = {
             "msgtype": "markdown",
             "markdown": {
-                "content": u"#### {title} \n > {message} [href]({url})".format(
+                "content": u"#### {title} \n > {message} [详情]({url})".format(
                     title=title,
                     message=event.message,
                     url=u"{}events/{}/".format(group.get_absolute_url(), event.id),
