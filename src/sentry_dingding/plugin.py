@@ -61,3 +61,16 @@ class DingDingPlugin(NotificationPlugin):
             headers={"Content-Type": "application/json"},
             data=json.dumps(data).encode("utf-8")
         )
+
+        dataText = {
+            "msgtype": "text",
+            "text": {
+                "content": "请相关人员跟进下",
+                "mentioned_mobile_list": ["@all"]
+            }
+        }
+        requests.post(
+            url=send_url,
+            headers={"Content-Type": "application/json"},
+            data=json.dumps(dataText).encode("utf-8")
+        )
